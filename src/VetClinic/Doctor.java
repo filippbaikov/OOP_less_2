@@ -1,14 +1,18 @@
 package VetClinic;
 
-public class Doctor {
+public class Doctor extends Employees{
+
+
     private Nurse nurse;
 
-    public Doctor() {
-        this.nurse=null;
-
-    }
-
-    public Doctor(Nurse nurse) {
+    public Doctor(String name, String surname, float salary, String specialization, Nurse nurse) {
+        super(name, surname, salary, specialization);
         this.nurse = nurse;
     }
+    public Doctor(String name, String surname, float salary, String specialization) {
+        super(name, surname, salary, specialization);
+        this.nurse =null;
+    }
+
+
 }
